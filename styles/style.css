@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #121212;
+  --bg-calc: #000000;
+  --keys: #353535;
+  --operators: rgb(90, 89, 89);
+  --border-color: #8e8a8a;
+  --font-color: #f3f3f3;
+  --font-secondary-color:#868484;
+  --equal: rgb(54, 30, 193);
+}
+
+button,
+input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  text-align: center;
+  
+}
+
+.workspace:hover {
+ background-color: #3c4a55;
+}
+
+.workspace img {
+  width: 80px;
+}
+
+.workspace p {
+  color: var(--font-color);
+}
+
+.calc {
+  background-color: var(--bg-calc);
+  padding: 0px 25px;
+  width: 400px;
+  transition: opacity 0.5s ease;
+  border: px solid var(--border-color);
+}
+
+.calc input {
+  padding: 0.5rem;
+  width: 100%;
+  text-align: right;
+}
+
+.top-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-modal.active {
+  cursor: move;
+  user-select: none;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+#display-value {
+  font-weight: 700;
+  font-size: 4em;
+  color: var(--font-color);
+}
+
+#previous-value {
+  display: flex;
+  font-size: 18px;
+  color: var(--font-secondary-color);
+}
+
+.calc-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.calc-keys button {
+  color: var(--font-color);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: transparent;
+}
+
+.calc-keys button:hover {
+filter: brightness(1.5);
+}
+
+.key {
+  display: flex;
+  background: var(--keys);
+  place-content: center;
+}
+
+.operator {
+background-color: var(--operators);
+}
+
+#equal {
+  grid-column: 3/5;
+  background-color: var(--equal);
+}
+
+.hide {
+  opacity: 0;
+  visibility: "visible";
+}
+
+.modal {
+  opacity: 1;
+  visibility: "visible";
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+#close-modal {
+  background-color: transparent;
+  font-size: 1.5em;
+  padding: 0.5rem 0.8rem;
+  transform: translateX(62%);
+  color: var(--font-color);
+  transition: background 0.2s ease;
+}
+
+#close-modal:hover {
+  background-color: red;
+}

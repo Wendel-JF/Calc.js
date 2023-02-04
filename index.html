@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" type="imagem/png" href="/images/Calculator_icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <script src="./js/script.js" defer></script>
+    
+    <title>Calc.js</title>
+  </head>
+  <body>
+    <main data-set="white">
+
+      <section class="workspace">
+        <button class="open-calc">
+          <img src="images/Calculator_icon.png" alt="/Calculator_icon" />
+          <p>Calc.js</p>
+        </button>
+      </section>
+      
+      <div class="calc hide">
+        <header class="top-modal">
+          <p class="title">Calc.js</p>
+          <button id="close-modal">X</button>
+        </header>
+        <div class="screen">
+          <input type="text" id="previous-value" disabled />
+          <input type="text" id="display-value" disabled />
+        </div>
+        <div class="calc-keys">
+          <button class="operator" data-value="cancel-entry">CE</button>
+          <button class="operator" data-value="clear">C</button>
+          <button class="operator" data-value="backspace">DEL</button>
+          <button class="operator" data-value="/">/</button>
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="operator" data-value="*">*</button>
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="operator" data-value="-">-</button>
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="operator" data-value="+">+</button>
+          <button class="key" data-value="0">0</button>
+          <button class="key decimal" data-value=".">.</button>
+          <button class="operator" id="equal" data-value="=">=</button>
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>

@@ -46,7 +46,6 @@ main {
   flex-direction: column;
   padding: 10px 20px;
   text-align: center;
-  
 }
 
 .workspace:hover {
@@ -59,6 +58,33 @@ main {
 
 .workspace p {
   color: var(--font-color);
+}
+
+.hide {
+  opacity: 0;
+  visibility: "visible";
+}
+
+.modal {
+  opacity: 1;
+  visibility: "visible";
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+#close-modal {
+  background-color: transparent;
+  font-size: 1.5em;
+  padding: 0.5rem 0.8rem;
+  transform: translateX(62%);
+  color: var(--font-color);
+  transition: background 0.2s ease;
+}
+
+#close-modal:hover {
+  background-color: red;
 }
 
 .calc {
@@ -139,29 +165,11 @@ background-color: var(--operators);
   background-color: var(--equal);
 }
 
-.hide {
-  opacity: 0;
-  visibility: "visible";
-}
 
-.modal {
-  opacity: 1;
-  visibility: "visible";
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-}
 
-#close-modal {
-  background-color: transparent;
-  font-size: 1.5em;
-  padding: 0.5rem 0.8rem;
-  transform: translateX(62%);
-  color: var(--font-color);
-  transition: background 0.2s ease;
+@media(max-width: 768px) {
+.calc {
+  width: 100%;
+  height: 100%;
 }
-
-#close-modal:hover {
-  background-color: red;
 }

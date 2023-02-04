@@ -162,6 +162,7 @@ closeModal.addEventListener("click", () => {
 
 //drag and move
 const header = document.querySelector(".top-modal");
+
 function onDrag({ movementX, movementY }) {
   let getStyle = window.getComputedStyle(modal);
   let leftVal = parseInt(getStyle.left);
@@ -169,10 +170,12 @@ function onDrag({ movementX, movementY }) {
   modal.style.left = `${leftVal + movementX}px`;
   modal.style.top = `${topVal + movementY}px`;
 }
+
 header.addEventListener("mousedown", () => {
   header.classList.add("active");
   header.addEventListener("mousemove", onDrag);
 });
+
 document.addEventListener("mouseup", () => {
   header.classList.remove("active");
   header.removeEventListener("mousemove", onDrag);

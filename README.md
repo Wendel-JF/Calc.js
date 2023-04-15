@@ -15,4 +15,4 @@ A Calculadora pode fazer contas com número decimais e naturais e também com as
   <img width='479' src='to_readme/dragAndDrop.gif'>
 </p>
 
-Você também pode abrir a Calculadora como se um programa e Também arrasto-o e solta-lo pela tela.
+Você também pode abrir a Calculadora como se fosse um programa e Também arrasto-o e solta-lo pela tela.
